@@ -96,7 +96,7 @@ repositories {
 
 | 模块 | 说明 |
 |------|------|
-| [eplugin-mysql](eplugin-mysql) | MySQL 数据库连接模块。`SqlConfig` 封装数据库连接参数，提供 HikariCP 连接池集成及 SQL 字符串转义工具 |
+| [eplugin-orm](eplugin-orm) | EOrm ORM 框架集成模块。提供可序列化的 `DataSourceConfig` 数据源配置（含 HikariCP 连接池参数），以及 `DB` 封装类管理 EOrm 实例生命周期，支持 DSL 查询、CRUD、事务等完整 ORM 能力 |
 | [eplugin-reflect](eplugin-reflect) | Java 反射工具库。`ReflectData` 缓存 Field/Method 反射信息，提供带缓存的字段读写、方法调用和多参数构造器实例化，简化私有成员的反射访问 |
 | [eplugin-channel](eplugin-channel) | BungeeCord Plugin Messaging Channel 通信封装。`EChannelHandler` 负责注册/注销频道、接收数据包并按子频道名分发给对应的 `ESubChannelHandler` 处理 |
 | [eplugin-adventure](eplugin-adventure) | Adventure 组件库辅助扩展。提供 `ItemStack.display` 扩展属性，将物品显示名称转换为 Adventure `Component` |
