@@ -11,7 +11,7 @@ import kotlinx.serialization.encoding.Encoder
 object DoubleRangeSerialization : KSerializer<ClosedFloatingPointRange<Double>> {
     override val descriptor =
         PrimitiveSerialDescriptor(
-            "top.e404.eplugin.bungeecord.config.serialization.IntRangeSerialization",
+            "top.e404.eplugin.bungeecord.config.serialization.DoubleRangeSerialization",
             PrimitiveKind.STRING
         )
 

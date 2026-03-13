@@ -15,7 +15,7 @@ import org.bukkit.entity.Player
 import top.e404.eplugin.EPlugin.Companion.formatAsConst
 
 /**
- * 从配置文件中获得一个
+ * 从配置文件中获得一个 SoundConfig
  *
  * @param path 路径
  */

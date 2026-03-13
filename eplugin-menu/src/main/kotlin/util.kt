@@ -1,7 +1,7 @@
 package top.e404.eplugin.menu
 
 /**
- * 检查[x], [y], [w], [h]是否在范围呢
+ * 检查[x], [y], [w], [h]是否在范围内
  */
 fun checkArg(x: Int, y: Int, w: Int, h: Int) {
     require(x in 0..8) { "require x in 0..8" }

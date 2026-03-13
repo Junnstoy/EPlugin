@@ -49,15 +49,6 @@ import kotlin.random.Random
  *     to: "#ffcccc"
  *     size: 1
  *
- * - type: DustTransition
- *   particle: DUST_COLOR_TRANSITION
- *   count: 1
- *   extra: 0
- *   data:
- *     from: "#ffffff"
- *     to: "#ffcccc"
- *     size: 1
- *
  * - type: Vibration
  *   particle: VIBRATION
  *   count: 1

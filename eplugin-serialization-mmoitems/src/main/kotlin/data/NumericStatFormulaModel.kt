@@ -18,8 +18,8 @@ data class NumericStatFormulaModel(
         fun NumericStatFormula.toDataModel() = NumericStatFormulaModel(
             base,
             scale,
-            maxSpread,
-            spread
+            spread,
+            maxSpread
         )
     }
 

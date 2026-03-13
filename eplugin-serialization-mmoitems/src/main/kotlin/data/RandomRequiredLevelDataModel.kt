@@ -18,8 +18,8 @@ data class RandomRequiredLevelDataModel(
         fun RandomRequiredLevelData.toDataModel() = RandomRequiredLevelDataModel(
             base,
             scale,
-            maxSpread,
-            spread
+            spread,
+            maxSpread
         )
     }
 

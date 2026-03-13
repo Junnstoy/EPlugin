@@ -45,7 +45,7 @@ open class Line(
      * @param y1 点1的y坐标
      * @param x2 点2的x坐标
      * @param y2 点2的y坐标
-     * @return 亮点
+     * @return 两点之间的距离
      */
     private fun distance(x1: Double, y1: Double, x2: Double, y2: Double) = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
 }

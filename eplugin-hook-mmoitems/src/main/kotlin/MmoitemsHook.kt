@@ -47,7 +47,7 @@ open class MmoitemsHook(
 }
 
 /**
- * 需要判断是否为""
+ * 获取物品的 MMOItems ID, 返回值可能为空字符串"", 如需判空请使用 [idOrNull]
  */
 inline val NBTItem.id get() = getString("MMOITEMS_ITEM_ID")!!
 inline val NBTItem.idOrNull get() = id.let { if (it == "") null else it }

@@ -33,10 +33,10 @@ abstract class AbstractDebugCommand(
         val senderName = sender.name
         if (senderName in plugin.debuggers) {
             plugin.debuggers.remove(senderName)
-            plugin.sendMsgWithPrefix(sender, plugin.langManager["debug.player_enable"])
+            plugin.sendMsgWithPrefix(sender, plugin.langManager["debug.player_disable"])
         } else {
             plugin.debuggers.add(senderName)
-            plugin.sendMsgWithPrefix(sender, plugin.langManager["debug.player_disable"])
+            plugin.sendMsgWithPrefix(sender, plugin.langManager["debug.player_enable"])
         }
     }
 }

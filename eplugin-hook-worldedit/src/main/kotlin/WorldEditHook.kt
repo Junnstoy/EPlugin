@@ -99,7 +99,7 @@ fun Clipboard.paste(
 )
 
 /**
- * 将剪切板粘贴到指定位置, 剪切板xz中心坐标对应给的xz坐标, 剪切板y最低点对应给的z坐标
+ * 将剪切板粘贴到指定位置, 剪切板xz中心坐标对应给的xz坐标, 剪切板y最低点对应给的y坐标
  */
 fun Clipboard.pasteCenter(
     session: EditSession,

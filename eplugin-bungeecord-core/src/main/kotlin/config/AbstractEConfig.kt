@@ -50,7 +50,7 @@ abstract class AbstractEConfig(
     open val saveDurationMinute = 10L
 
     /**
-     * 计划一次保存, 在[saveDurationMinute]刻后执行, 执行完成后移除task, 若在已有task则不处理, 否则创建task
+     * 计划一次保存, 在[saveDurationMinute]分钟后执行, 执行完成后移除task, 若在已有task则不处理, 否则创建task
      */
     fun scheduleSave() {
         if (saveTask != null) return

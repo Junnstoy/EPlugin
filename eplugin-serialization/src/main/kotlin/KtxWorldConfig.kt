@@ -7,7 +7,7 @@ import kotlinx.serialization.StringFormat
 import top.e404.eplugin.EPlugin
 
 /**
- * 代表一个解析成文本的配置文件
+ * 代表一个按世界区分的配置文件, 支持全局配置和每世界独立配置
  *
  * @property plugin 属于的插件
  * @property path 文件在插件数据目录中的路径

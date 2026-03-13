@@ -10,7 +10,7 @@ import top.e404.eplugin.EPlugin
 import top.e404.eplugin.hook.worldguard.WorldGuardHook
 
 /**
- * 代表一个解析成文本的配置文件
+ * 基于 WorldGuard 区域的分层配置, 按 region > world > global 优先级匹配配置
  *
  * @property plugin 属于的插件
  * @property path 文件在插件数据目录中的路径

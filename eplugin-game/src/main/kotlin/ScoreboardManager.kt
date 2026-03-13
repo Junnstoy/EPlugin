@@ -82,7 +82,7 @@ abstract class ScoreboardManager(val config: ScoreboardConfig) {
     fun setNoCollision() {
         data.values.forEach { scoreboard ->
             scoreboard.scoreboard.teams.forEach {
-                it.setOption(Team.Option.COLLISION_RULE, Team.OptionStatus.ALWAYS)
+                it.setOption(Team.Option.COLLISION_RULE, Team.OptionStatus.NEVER)
             }
         }
     }

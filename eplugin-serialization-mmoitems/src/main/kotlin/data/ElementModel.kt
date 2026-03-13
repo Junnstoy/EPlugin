@@ -24,7 +24,7 @@ data class ElementModel(
             loreIcon = loreIcon,
             color = color,
             icon = icon,
-            criticalStrikeName = getPrivateField<Element, SkillHandler<*>>("regularAttack").id,
+            criticalStrikeName = getPrivateField<Element, SkillHandler<*>>("criticalStrike").id,
             regularAttackName = getPrivateField<Element, SkillHandler<*>>("regularAttack").id,
         )
     }

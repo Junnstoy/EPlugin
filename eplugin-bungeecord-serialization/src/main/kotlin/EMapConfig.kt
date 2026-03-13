@@ -11,7 +11,7 @@ import top.e404.eplugin.bungeecord.EPlugin
 import java.util.*
 
 /**
- * 代表一个解析成文本的配置文件
+ * 代表一个基于 kotlinx.serialization 的 Map 类型配置文件
  *
  * @property plugin 属于的插件
  * @property path 文件在插件数据目录中的路径
