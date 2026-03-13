@@ -8,15 +8,14 @@
 
 ## 开始使用
 
-1. `git clone https://github.com/4o4E/EPlugin.git`
-2. `gradlew publishToMavenLocal`
+### 通过 Maven 仓库引入
 
 ```kotlin
 val epluginVer = "1.4.0" // 在release中查看最新版本
 fun eplugin(module: String, version: String = epluginVer) = "top.e404:eplugin-$module:$version"
 
 repositories {
-    mavenLocal()
+    maven("https://nexus.e404.top:3443/repository/maven-snapshots/")
 }
 
 dependencies {
@@ -37,6 +36,21 @@ tasks {
         relocate("kotlin", "top.e404.eclean.relocate.kotlin")
         relocate("top.e404.eplugin", "top.e404.eclean.relocate.eplugin")
     }
+}
+```
+
+### 本地构建
+
+若无法访问 Maven 仓库，可通过本地构建引入：
+
+1. `git clone https://github.com/4o4E/EPlugin.git`
+2. `gradlew publishToMavenLocal`
+
+然后在项目中使用 `mavenLocal()` 替代上述 Maven 仓库：
+
+```kotlin
+repositories {
+    mavenLocal()
 }
 ```
 
