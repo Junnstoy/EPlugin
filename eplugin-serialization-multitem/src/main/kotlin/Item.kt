@@ -28,7 +28,7 @@ data class McItem(
     override val amount: Int = 1,
 ) : Item {
     override fun toItemStack() = ItemStack(id).also { it.amount = amount }
-    override fun match(item: ItemStack) = if (iaHook.getIaItemInfo(item) != null
+    override fun match(item: ItemStack) = if (iaHook.getIaItem(item) != null
         || miHook.getNbtItem(item).id.isNotBlank()
     ) false else item.type == id
 }
@@ -53,7 +53,7 @@ data class IaItem(
     override val amount: Int = 1,
 ) : Item {
     override fun toItemStack() = iaHook.getIaItem(namespaceId)?.itemStack?.also { it.amount = amount } ?: throw UnknownItemsAdderItem(namespaceId)
-    override fun match(item: ItemStack) = iaHook.getIaItemInfo(item)?.namespacedID == namespaceId
+    override fun match(item: ItemStack) = iaHook.getIaItem(item)?.namespacedID == namespaceId
 }
 
 class UnknownItemsAdderItem(namespaceId: String) : RuntimeException("无法找到id为${namespaceId}的ItemsAdder物品")

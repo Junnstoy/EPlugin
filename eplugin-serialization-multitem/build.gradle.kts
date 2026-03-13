@@ -10,6 +10,7 @@ repositories {
     jitpack()
     lumine()
     phoenix()
+    itemsadder()
 }
 
 dependencies {
@@ -26,11 +27,11 @@ dependencies {
 
 java {
     withSourcesJar()
-    targetCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }

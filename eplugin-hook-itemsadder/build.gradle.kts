@@ -7,6 +7,7 @@ plugins {
 
 repositories {
     jitpack()
+    itemsadder()
 }
 
 dependencies {

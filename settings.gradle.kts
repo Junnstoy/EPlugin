@@ -29,6 +29,7 @@ include(
     ":eplugin-hook-worldguard",
     ":eplugin-menu",
     ":eplugin-mysql",
+    ":eplugin-orm",
     ":eplugin-reflect",
     ":eplugin-script",
     ":eplugin-serialization",

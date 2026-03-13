@@ -17,7 +17,7 @@ object Hooks {
     const val worldedit = "7.2.20"
     const val bentobox = "1.20.1-SNAPSHOT"
     const val playerPoints = "3.2.4"
-    const val itemsadder = "3.0.0"
+    const val itemsadder = "4.0.10"
     const val nova = "0.12.7"
     const val modelEngine = "R3.2.0"
 }

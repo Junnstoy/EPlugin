@@ -11,6 +11,8 @@ dependencies {
     eplugin()
     // mysql 8.0.30 5.1.49
     api("mysql:mysql-connector-java:8.0.30")
+    api("top.e404.eorm:eorm-core:1.0.0-SNAPSHOT")
+    api("top.e404.eorm:eorm-dialect-mysql:1.0.0-SNAPSHOT")
     // hikari
     api("com.zaxxer:HikariCP:4.0.3")
     // serialization
