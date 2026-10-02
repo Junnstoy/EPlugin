@@ -10,6 +10,12 @@ dependencies {
     spigot()
     bstats()
     serializationCore()
+    testImplementation(kotlin("test-junit5"))
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.3")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 java {

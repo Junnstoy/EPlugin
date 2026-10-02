@@ -4,15 +4,17 @@ package top.e404.eplugin.util
 
 import org.bukkit.Bukkit
 import top.e404.eplugin.update.EUpdater
-import java.util.regex.Pattern
 
-val mcVer by lazy {
-    val p = Pattern.compile("(?<major>\\d+)\\.(?<minor>\\d+)(\\.(?<revision>\\d+))?-.*")
-    val m = p.matcher(Bukkit.getBukkitVersion())
-    if (!m.find()) return@lazy null
-    EUpdater.Ver(
-        m.group("major").toInt(),
-        m.group("minor").toInt(),
-        m.group("revision")?.toIntOrNull() ?: 0
+val mcVer by lazy { parseMinecraftVersion(Bukkit.getBukkitVersion()) }
+
+private val minecraftVersionPattern = Regex("^(\\d+)\\.(\\d+)(?:\\.(\\d+))?(?:[-+].*|\\.build\\..*)?$")
+
+/** Parses the Minecraft version, without treating Paper's build number as a revision. */
+internal fun parseMinecraftVersion(version: String): EUpdater.Ver? {
+    val match = minecraftVersionPattern.matchEntire(version) ?: return null
+    return EUpdater.Ver(
+        match.groupValues[1].toIntOrNull() ?: return null,
+        match.groupValues[2].toIntOrNull() ?: return null,
+        match.groups[3]?.value?.toIntOrNull() ?: if (match.groups[3] == null) 0 else return null
     )
 }
